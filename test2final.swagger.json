@@ -1,0 +1,180 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "testing1",
+    "description": "testing1"
+  },
+  "host": "wa.krupacc.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/send-message": {
+      "post": {
+        "summary": "testing",
+        "description": "testing",
+        "operationId": "Testing",
+        "parameters": [
+          {
+            "name": "mod",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "no-cors",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "number": {
+                  "type": "string",
+                  "description": "number"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "message"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean",
+                  "description": "status"
+                },
+                "response": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "object",
+                      "properties": {
+                        "fromMe": {
+                          "type": "boolean",
+                          "description": "fromMe"
+                        },
+                        "remote": {
+                          "type": "object",
+                          "properties": {
+                            "server": {
+                              "type": "string",
+                              "description": "server"
+                            },
+                            "user": {
+                              "type": "string",
+                              "description": "user"
+                            },
+                            "_serialized": {
+                              "type": "string",
+                              "description": "_serialized"
+                            }
+                          },
+                          "description": "remote"
+                        },
+                        "id": {
+                          "type": "string",
+                          "description": "id"
+                        },
+                        "_serialized": {
+                          "type": "string",
+                          "description": "_serialized"
+                        }
+                      },
+                      "description": "id"
+                    },
+                    "ack": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "ack"
+                    },
+                    "hasMedia": {
+                      "type": "boolean",
+                      "description": "hasMedia"
+                    },
+                    "body": {
+                      "type": "string",
+                      "description": "body"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "type"
+                    },
+                    "timestamp": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "timestamp"
+                    },
+                    "from": {
+                      "type": "string",
+                      "description": "from"
+                    },
+                    "to": {
+                      "type": "string",
+                      "description": "to"
+                    },
+                    "isForwarded": {
+                      "type": "boolean",
+                      "description": "isForwarded"
+                    },
+                    "isStarred": {
+                      "type": "boolean",
+                      "description": "isStarred"
+                    },
+                    "fromMe": {
+                      "type": "boolean",
+                      "description": "fromMe"
+                    },
+                    "hasQuotedMsg": {
+                      "type": "boolean",
+                      "description": "hasQuotedMsg"
+                    },
+                    "vCards": {
+                      "type": "array",
+                      "items": {},
+                      "description": "vCards"
+                    },
+                    "mentionedIds": {
+                      "type": "array",
+                      "items": {},
+                      "description": "mentionedIds"
+                    }
+                  },
+                  "description": "response"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "undefined": {
+      "type": "basic"
+    }
+  },
+  "security": [],
+  "tags": []
+}
